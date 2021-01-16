@@ -1,4 +1,5 @@
 ﻿using System;
+using CursoDesignPatterns.Investimentos;
 
 namespace CursoDesignPatterns
 {
@@ -12,7 +13,13 @@ namespace CursoDesignPatterns
             Orcamento orcamento = new Orcamento(500.00);
             CalculadorImposto calculador = new CalculadorImposto();
             
-            calculador.RealizaCalculo(orcamento, iss);
+            // calculador.RealizaCalculo(orcamento, iss);
+
+            RealizadorDeInvestimentos realizadorDeInvestimentos = new RealizadorDeInvestimentos();
+            Investimento moderado = new Moderado();
+            Console.WriteLine(orcamento.Valor);
+            realizadorDeInvestimentos.RealizaInvestimento(orcamento, moderado);
+            Console.ReadKey();
         }
     }
 }

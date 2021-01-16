@@ -6,7 +6,7 @@ namespace CursoDesignPatterns
 
         public Orcamento(double valor)
         {
-            this.Valor = Valor;
+            this.Valor = valor;
         } 
     }
 }
